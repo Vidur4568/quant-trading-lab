@@ -1,14 +1,24 @@
 # Quant Trading Lab
 
-Machine learning research on hourly Bitcoin returns: lagged-return features, a PyTorch model, and long/short signals evaluated on a held-out chronological test set.
+My step-by-step journey learning quantitative research in Python, from programming fundamentals to a PyTorch-based Bitcoin return prediction project evaluated on a held-out chronological test set.
 
 ## Overview
 
-This project asks a focused question: do the three most recent hourly Bitcoin returns contain enough information to predict the direction of the next hourly return, and can that be turned into a simple systematic long/short strategy?
+This repository documents my progress learning quantitative research and building toward independent, reproducible research projects. It is organized as a record of each step, from Python basics through time-series analysis, predictive modeling, and strategy evaluation.
 
-It covers the full research loop on a small scale: data loading, log-return and feature construction, exploratory analysis, model training, signal generation, and out-of-sample evaluation. The results are preliminary, and the limitations and roadmap below matter as much as the numbers.
+The featured project asks a focused question: do the three most recent hourly Bitcoin returns contain enough information to predict the direction of the next hourly return, and can that be turned into a simple systematic long/short strategy?
 
-## Key Results
+It covers the full research loop on a small scale: data loading, log-return and feature construction, exploratory analysis, model training, signal generation, and out-of-sample evaluation. The results are preliminary, and the limitations below matter as much as the numbers.
+
+## Goals
+
+1. **Finish the series.** Work through all of the [MemLabs](https://www.youtube.com/@memlabs-research) quant research videos, implementing each topic in a notebook here.
+2. **Build my own models.** Move from guided exercises to independent work: my own hypotheses, features, models, and validation.
+3. **Research commodities and energy.** Apply the same workflow to oil, natural gas, and other energy markets, testing ideas such as mean reversion and momentum with realistic transaction costs and walk-forward validation.
+
+## Featured Project: Bitcoin Return Prediction
+
+### Key Results
 
 Evaluated on a chronological 70% / 30% train/test split:
 
@@ -105,16 +115,6 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 jupyter notebook notebooks/
 ```
-
-## Roadmap
-
-- [ ] Add transaction costs and slippage, and report turnover
-- [ ] Compare against buy-and-hold and simple baselines
-- [ ] Add maximum drawdown and volatility metrics
-- [ ] Implement walk-forward validation and test statistical significance
-- [ ] Compare the neural model with linear and logistic regression
-- [ ] Test additional features such as volatility and volume
-- [ ] Evaluate across market regimes and additional assets
 
 ## Disclaimer
 
